@@ -43,13 +43,13 @@ Before starting, ensure that you have:
   java -version  # Verify installation
   ```
 ## Installation
-## Adding the Elastic Repository
+#### Adding the Elastic Repository
 ```bash
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
 sudo apt update
 ```
-## Installing Elasticsearch
+#### Installing Elasticsearch
 ```bash
 sudo apt install -y elasticsearch
 ```
@@ -79,7 +79,7 @@ If the password is unknown, reset it:
 ```bash
 sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
 ```
-## Installing Kibana
+#### Installing Kibana
 ```bash
 sudo apt install -y kibana
 ```
@@ -99,7 +99,7 @@ If Kibana is not working, check logs:
 ```bash
 sudo journalctl -u kibana --no-pager | tail -50
 ```
-## Installing Logstash
+#### Installing Logstash
 ```bash
 sudo apt install -y logstash
 ```
@@ -127,7 +127,7 @@ Verify:
 ```bash
 sudo systemctl status logstash
 ```
-## Installing Filebeat
+#### Installing Filebeat
 ```bash
 sudo apt install -y filebeat
 ```
